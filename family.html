@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nominee and Family Details</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <h2>Additional Information</h2>
+    <div class="form-wrapper">
+        
+        <!-- Nominee Details -->
+        <div class="form-card">
+            <h3>Nominee 1 Details </h3>
+            <form id="familyForm">
+                
+                <!-- Nominee 1 -->
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="nominee1_name" placeholder="Person Name" required>
+                    <span class="required-marker">*</span>
+                    
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-people-arrows"></i>
+                    <input type="text" id="nominee1_relationship" placeholder="Relationship" required>
+                    <span class="required-marker">*</span>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-percentage"></i>
+                    <input type="text" id="nominee1_share" placeholder="Share %" required>
+                    <span class="required-marker">*</span>
+                </div>
+                
+                <!-- Nominee 2 -->
+                <h3>Nominee 2 Details</h3>
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="nominee2_name" placeholder="Person Name">
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-people-arrows"></i>
+                    <input type="text" id="nominee2_relationship" placeholder="Relationship">
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-percentage"></i>
+                    <input type="text" id="nominee2_share" placeholder="Share %">
+                </div>
+                
+                <!-- Emergency Contact Details -->
+                <h3>Emergency Contact 1 </h3>
+                <!-- Contact 1 -->
+                <div class="input-group">
+                    <i class="fas fa-user-shield"></i>
+                    <input type="text" id="emergency1_name" placeholder="Person Name" required>
+                    <span class="required-marker">*</span>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-people-arrows"></i>
+                    <input type="text" id="emergency1_relationship" placeholder="Relationship" required>
+                    <span class="required-marker">*</span>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" id="emergency1_contact" placeholder="Contact Details" required>
+                    <span class="required-marker">*</span>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="emergency1_email" placeholder="E-mail" required>
+                    <span class="required-marker">*</span>
+                </div>
+                
+                <!-- Contact 2 -->
+                <h3>Emergency Contact 2</h3>
+                <div class="input-group">
+                    <i class="fas fa-user-shield"></i>
+                    <input type="text" id="emergency2_name" placeholder="Person Name">
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-people-arrows"></i>
+                    <input type="text" id="emergency2_relationship" placeholder="Relationship">
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" id="emergency2_contact" placeholder="Contact Details">
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="emergency2_email" placeholder="E-mail">
+                </div>
+            
+        </div>
+
+        <!-- Family Members Details -->
+        <div class="form-card">
+            <h3>Details of Family Members</h3>
+            
+            <!-- Family Member 1 -->
+            <h3>Family Member 1</h3>
+            <div class="grid-container">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="family1_name" placeholder="Name" required>
+                    <span class="required-marker">*</span>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-calendar-alt"></i>
+                    <input type="date" id="family1_dob" placeholder="DOB" required>
+                    <span class="required-marker">*</span>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-people-arrows"></i>
+                    <input type="text" id="family1_relationship" placeholder="Relation" required>
+                    <span class="required-marker">*</span>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-briefcase"></i>
+                    <input type="text" id="family1_occupation" placeholder="Occupation" required>
+                    <span class="required-marker">*</span>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-id-card"></i>
+                    <input type="text" id="family1_aadhar" placeholder="Aadhar No." required>
+                    <span class="required-marker">*</span>
+                </div>
+            </div>
+
+            <!-- Family Member 2 -->
+            <h3>Family Member 2</h3>
+            <div class="grid-container">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="family2_name" placeholder="Person Name">
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-calendar-alt"></i>
+                    <input type="date" id="family2_dob">
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-people-arrows"></i>
+                    <input type="text" id="family2_relationship" placeholder="Relationship">
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-briefcase"></i>
+                    <input type="text" id="family2_occupation" placeholder="Occupation">
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-id-card"></i>
+                    <input type="text" id="family2_aadhar" placeholder="Aadhar No.">
+                </div>
+            </div>
+
+            <!-- Family Member 3 -->
+            <h3>Family Member 3</h3>
+            <div class="grid-container">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="family3_name" placeholder="Person Name">
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-calendar-alt"></i>
+                    <input type="date" id="family3_dob">
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-people-arrows"></i>
+                    <input type="text" id="family3_relationship" placeholder="Relationship">
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-briefcase"></i>
+                    <input type="text" id="family3_occupation" placeholder="Occupation">
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-id-card"></i>
+                    <input type="text" id="family3_aadhar" placeholder="Aadhar No.">
+                </div>
+            </div>
+
+            <!-- Family Member 4 -->
+            <h3>Family Member 4</h3>
+            <div class="grid-container">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="family4_name" placeholder="Person Name">
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-calendar-alt"></i>
+                    <input type="date" id="family4_dob">
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-people-arrows"></i>
+                    <input type="text" id="family4_relationship" placeholder="Relationship">
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-briefcase"></i>
+                    <input type="text" id="family4_occupation" placeholder="Occupation">
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-id-card"></i>
+                    <input type="text" id="family4_aadhar" placeholder="Aadhar No.">
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="nav-buttons">
+                <button type="button" id="backToPersonal" class="primary-button">BACK</button>
+                <button type="submit" id="goToExperience" class="primary-button">NEXT</button>
+            </div>
+
+        </div>
+    </div>
+</form>
+
+    <script src="script.js"></script>
+</body>
+</html>

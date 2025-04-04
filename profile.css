@@ -1,0 +1,346 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a5f7a, #378430, #2b8a3e);
+    background-size: 400% 400%;
+    color: white;
+    padding: 20px;
+    animation: gradientBG 15s ease infinite;
+}
+
+/* Improved Animated Background */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Profile Container - Enhanced Glass Morphism */
+#profilePage {
+    width: 100%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.12);
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 20px auto;
+    transform: translateY(50px);
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
+    transition: all 0.4s ease;
+}
+
+#profilePage:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Profile Header with Modern Typography */
+#profilePage h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #0a3c41;
+    animation: fadeInDown 1s ease-in-out;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#profilePage h1::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -8px;
+    left: 50%;
+    background: linear-gradient(90deg, #083824, #00f2fe);
+    transform: translateX(-50%);
+    transition: width 0.6s ease;
+    animation: underline 1.5s ease forwards 0.5s;
+    border-radius: 3px;
+}
+
+@keyframes underline {
+    from {
+        width: 0;
+    }
+    to {
+        width: 80%;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* Improved Grid Layout */
+.profile-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+    margin-top: 35px;
+}
+
+/* Enhanced Card Styling */
+.profile-info p {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 18px;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+    transform: translateY(30px);
+    opacity: 0;
+    animation: slideIn 0.5s ease forwards;
+    overflow: hidden;
+    position: relative;
+    border-left: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.profile-info p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #012c15, transparent);
+    transition: left 0.8s ease;
+}
+
+.profile-info p:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.15);
+    border-left: 3px solid #4facfe;
+}
+
+.profile-info p:hover::before {
+    left: 100%;
+}
+
+/* Improved Sequential Animation */
+.profile-info p:nth-child(1) { animation-delay: 0.1s; }
+.profile-info p:nth-child(2) { animation-delay: 0.15s; }
+.profile-info p:nth-child(3) { animation-delay: 0.2s; }
+.profile-info p:nth-child(4) { animation-delay: 0.25s; }
+.profile-info p:nth-child(5) { animation-delay: 0.3s; }
+.profile-info p:nth-child(6) { animation-delay: 0.35s; }
+.profile-info p:nth-child(7) { animation-delay: 0.4s; }
+.profile-info p:nth-child(8) { animation-delay: 0.45s; }
+.profile-info p:nth-child(9) { animation-delay: 0.5s; }
+.profile-info p:nth-child(10) { animation-delay: 0.55s; }
+.profile-info p:nth-child(11) { animation-delay: 0.6s; }
+.profile-info p:nth-child(12) { animation-delay: 0.65s; }
+.profile-info p:nth-child(13) { animation-delay: 0.7s; }
+.profile-info p:nth-child(14) { animation-delay: 0.75s; }
+.profile-info p:nth-child(15) { animation-delay: 0.8s; }
+.profile-info p:nth-child(16) { animation-delay: 0.85s; }
+.profile-info p:nth-child(17) { animation-delay: 0.9s; }
+
+@keyframes slideIn {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Enhanced Label and Value Styling */
+.profile-info strong {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #044027;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.profile-info span {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    color: #134540;
+    line-height: 1.5;
+}
+
+/* Enhanced Button Styling */
+#logout {
+    width: 200px;
+    padding: 14px;
+    background: linear-gradient(45deg, #083824, #2b8a3e);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.4s ease;
+    margin: 40px auto 0;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: scale(0.9);
+    animation: buttonFadeIn 0.5s ease forwards 1.5s;
+    display: block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#logout::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s ease;
+}
+
+#logout:hover {
+    background: linear-gradient(45deg, #083824, #1f7a2e);
+    transform: translateY(-3px);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.3);
+}
+
+#logout:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#logout:hover::before {
+    left: 100%;
+}
+
+@keyframes buttonFadeIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Enhanced Loading Animation */
+[id$="Loading..."] {
+    position: relative;
+    display: inline-block;
+}
+
+[id$="Loading..."]::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 4px;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* Improved Pulse Animation for Sensitive Values */
+#aadharNo, #accountNo {
+    position: relative;
+    animation: securePulse 3s infinite alternate;
+    font-family: monospace;
+    letter-spacing: 1px;
+    padding: 2px 8px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    display: inline-block;
+}
+
+@keyframes securePulse {
+    from {
+        color: rgba(255, 255, 255, 0.9);
+        background: rgba(0, 0, 0, 0.1);
+    }
+    to {
+        color: #083824;
+        background: rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 768px) {
+    .profile-info {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    #profilePage {
+        padding: 25px;
+        width: 95%;
+    }
+    
+    #profilePage h1 {
+        font-size: 28px;
+    }
+    
+    .profile-info p {
+        padding: 15px;
+    }
+    
+    .profile-info strong {
+        font-size: 13px;
+    }
+    
+    .profile-info span {
+        font-size: 15px;
+    }
+    
+    #logout {
+        width: 180px;
+        padding: 12px;
+    }
+}

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+    <title>Health Information Form</title>
+    <link rel="stylesheet" href="medical.css">
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Health Information Form</h1>
+        <nav>
+            <a href="#physical">Physical Info</a>
+            <a href="#medical">Medical History</a>
+            <a href="#additional">Additional Info</a>
+        </nav>
+    </header>
+
+    <main>
+        <form id="healthForm">
+            <div class="form-wrapper">
+                
+                <!-- Physical Information (Card 1) -->
+                <div class="form-card" id="physical">
+                    <h3>Physical Information</h3>
+                    <div class="grid-container">
+                        <div class="input-group">
+                            <i class="fas fa-ruler-vertical"></i>
+                            <input type="number" id="height_cm" placeholder="Height" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-weight"></i>
+                            <input type="number" id="weight_kg" placeholder="Weight" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fas fa-tint"></i>
+                        <select id="blood_group" required>
+                            <option value="">Select Blood Group</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fas fa-wheelchair"></i>
+                        <select id="handicap" required>
+                            <option value="">Are you handicapped?</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+
+                    <h3>Medical History</h3>
+                    
+                    <div class="input-group">
+                        <i class="fas fa-allergies"></i>
+                        <div class="input-wrapper">
+                            <div class="input-label">Are you allergic to any Food/Substances/Medicine?</div>
+                            <div class="radio-fields">
+                                <label class="radio-label"><input type="radio" name="is_allergic" value="Yes"> Yes</label>
+                                <label class="radio-label"><input type="radio" name="is_allergic" value="No"> No</label>
+                            </div>
+                            <textarea id="allergic_details" placeholder="If yes, mention details"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fas fa-hospital"></i>
+                        <div class="input-wrapper">
+                            <div class="input-label">Do you have any Major Medical Ailment?</div>
+                            <div class="radio-fields">
+                                <label class="radio-label"><input type="radio" name="has_medical_ailment" value="Yes"> Yes</label>
+                                <label class="radio-label"><input type="radio" name="has_medical_ailment" value="No"> No</label>
+                            </div>
+                            <textarea id="medical_ailment_details" placeholder="If yes, mention details"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Surgery & Medical Conditions (Card 2) -->
+                <div class="form-card" id="medical">
+                    <h3>Surgery & Medical Conditions</h3>
+                    
+                    <div class="input-group">
+                        <i class="fas fa-procedures"></i>
+                        <div class="input-wrapper">
+                            <div class="input-label">Have you undergone any Major Operation in last 1 year?</div>
+                            <div class="radio-fields">
+                                <label class="radio-label"><input type="radio" name="operation_last_year" value="Yes"> Yes</label>
+                                <label class="radio-label"><input type="radio" name="operation_last_year" value="No"> No</label>
+                            </div>
+                            <textarea id="operation_last_year_details" placeholder="If yes, mention details"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fas fa-procedures"></i>
+                        <div class="input-wrapper">
+                            <div class="input-label">Have you undergone any Major Operation before 1 year?</div>
+                            <div class="radio-fields">
+                                <label class="radio-label"><input type="radio" name="operation_before_year" value="Yes"> Yes</label>
+                                <label class="radio-label"><input type="radio" name="operation_before_year" value="No"> No</label>
+                            </div>
+                            <textarea id="operation_before_year_details" placeholder="If yes, mention details"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="grid-container">
+                        <div class="input-group">
+                            <i class="fas fa-lungs"></i>
+                            <div class="input-wrapper">
+                                <div class="input-label">Are you Asthmatic?</div>
+                                <div class="radio-fields">
+                                    <label class="radio-label"><input type="radio" name="is_asthmatic" value="Yes"> Yes</label>
+                                    <label class="radio-label"><input type="radio" name="is_asthmatic" value="No"> No</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <i class="fas fa-heartbeat"></i>
+                            <div class="input-wrapper">
+                                <div class="input-label">Blood Pressure</div>
+                                <div class="radio-fields">
+                                    <label class="radio-label"><input type="radio" name="blood_pressure" value="High"> High</label>
+                                    <label class="radio-label"><input type="radio" name="blood_pressure" value="Low"> Low</label>
+                                    <label class="radio-label"><input type="radio" name="blood_pressure" value="Normal"> Normal</label>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-container">
+                        <div class="input-group">
+                            <i class="fas fa-heart"></i>
+                            <div class="input-wrapper">
+                                <div class="input-label">Heart related problem?</div>
+                                <div class="radio-fields">
+                                    <label class="radio-label"><input type="radio" name="has_heart_problem" value="Yes"> Yes</label>
+                                    <label class="radio-label"><input type="radio" name="has_heart_problem" value="No"> No</label>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <i class="fas fa-prescription"></i>
+                            <div class="input-wrapper">
+                                <div class="input-label">Are you Diabetic?</div>
+                                <div class="radio-fields">
+                                    <label class="radio-label"><input type="radio" name="is_diabetic" value="Yes"> Yes</label>
+                                    <label class="radio-label"><input type="radio" name="is_diabetic" value="No"> No</label>
+                                   
+                                </div>
+                                <!-- <select id="sugarCheckFrequency" class="dropdown-after-radio">
+                                    <option value="">How frequently you check your Sugar level?</option>
+                                    <option value="Monthly">Monthly</option>
+                                    <option value="Yearly">Yearly</option>
+                                    <option value="Never">Never</option>
+                                </select> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fas fa-heartbeat"></i>
+                        <div class="input-wrapper">
+                            <div class="input-label">Have you undergone Stress test in past?</div>
+                            <div class="radio-fields">
+                                <label class="radio-label"><input type="radio" name="had_stress_test" value="Yes"> Yes</label>
+                                <label class="radio-label"><input type="radio" name="had_stress_test" value="No"> No</label>
+                            </div>
+                            <textarea id="stress_test_details" placeholder="If yes, brief about same and mention if you are on any Medication"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fas fa-brain"></i>
+                        <div class="input-wrapper">
+                            <div class="input-label">Have you undergone any Mental Health Screening in past?</div>
+                            <div class="radio-fields">
+                                <label class="radio-label"><input type="radio" name="had_mental_health_screening" value="Yes"> Yes</label>
+                                <label class="radio-label"><input type="radio" name="had_mental_health_screening" value="No"> No</label>
+                            </div>
+                            <textarea id="mental_health_details" placeholder="If yes, brief about same and mention if you are on any Medication"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Information (Card 3) -->
+                <div class="form-card" id="additional">
+                    <h3>Additional Health Information</h3>
+
+                    <div class="input-group">
+                        <i class="fas fa-car-crash"></i>
+                        <div class="input-wrapper">
+                            <div class="input-label">Have you meet with any Fatal Accident in past?</div>
+                            <div class="radio-fields">
+                                <label class="radio-label"><input type="radio" name="had_fatal_accident" value="Yes"> Yes</label>
+                                <label class="radio-label"><input type="radio" name="had_fatal_accident" value="No"> No</label>
+                            </div>
+                            <textarea id="fatal_accident_details" placeholder="If yes, brief the details"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="grid-container">
+                        <div class="input-group">
+                            <i class="fas fa-eye"></i>
+                            <div class="input-wrapper">
+                                <div class="input-label">Do you have any Eye Sight Issue?</div>
+                                <div class="radio-fields">
+                                    <label class="radio-label"><input type="radio" name="has_eyesight_issue" value="Yes"> Yes</label>
+                                    <label class="radio-label"><input type="radio" name="has_eyesight_issue"  value="No"> No</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <i class="fas fa-deaf"></i>
+                            <div class="input-wrapper">
+                                <div class="input-label">Do you have any Hearing Issue?</div>
+                                <div class="radio-fields">
+                                    <label class="radio-label"><input type="radio" name="has_hearing_issue" value="Yes"> Yes</label>
+                                    <label class="radio-label"><input type="radio" name="has_hearing_issue" value="No"> No</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fas fa-smoking"></i>
+                        <div class="input-wrapper">
+                            <div class="input-label">Do you smoke?</div>
+                            <div class="radio-fields">
+                                <label class="radio-label"><input type="radio" name="is_smoker" value="Yes"> Yes</label>
+                                <label class="radio-label"><input type="radio" name="is_smoker" value="No"> No</label>
+                            </div>
+                            <select id="smoking_frequency" class="dropdown-after-radio">
+                                <option value="">If yes, how many cigarettes per day?</option>
+                                <option value="1-5">1-5</option>
+                                <option value="6-10">6-10</option>
+                                <option value="More than 10">More than 10</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fas fa-cocktail"></i>
+                        <div class="input-wrapper">
+                            <div class="input-label">Do you consume alcohol?</div>
+                            <div class="radio-fields">
+                                <label class="radio-label"><input type="radio" name="consumes_alcohol" value="Yes"> Yes</label>
+                                <label class="radio-label"><input type="radio" name="consumes_alcohol" value="No"> No</label>
+                            </div>
+                            <select id="alcohol_frequency" class="dropdown-after-radio">
+                                <option value="">If yes, how frequently?</option>
+                                <option value="Rarely">Rarely (Special occasions only)</option>
+                                <option value="Sometimes">Sometimes (1-2 times a month)</option>
+                                <option value="Frequently">Frequently (1-2 times a week)</option>
+                                <option value="Daily">Daily</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fas fa-running"></i>
+                        <div class="input-wrapper">
+                            <div class="input-label">Do you exercise regularly?</div>
+                            <div class="radio-fields">
+                                <label class="radio-label"><input type="radio" name="exercises_regularly" value="Yes"> Yes</label>
+                                <label class="radio-label"><input type="radio" name="exercises_regularly" value="No"> No</label>
+                            </div>
+                            <select id="exercise_frequency" class="dropdown-after-radio">
+                                <option value="">If yes, how frequently?</option>
+                                <option value="1-2 times/week">1-2 times per week</option>
+                                <option value="3-5 times/week">3-5 times per week</option>
+                                <option value="Daily">Daily</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <h3>Emergency Contact</h3>
+                    <div class="input-group">
+                        <i class="fas fa-user-friends"></i>
+                        <input type="text" id="emergency_contact_name" placeholder="Emergency Contact Name" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <i class="fas fa-phone"></i>
+                        <input type="text" id="emergency_contact_phone" placeholder="Emergency Contact Phone" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <i class="fas fa-link"></i>
+                        <select id="emergency_contact_relation" required>
+                            <option value="">Relationship to You</option>
+                            <option value="Spouse">Spouse</option>
+                            <option value="Parent">Parent</option>
+                            <option value="Sibling">Sibling</option>
+                            <option value="Child">Child</option>
+                            <option value="Friend">Friend</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form Submission -->
+            <div style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 40px; color: #065d1d;">
+                <button type="submit">Submit Health Information</button>
+            </div>
+        </form>
+    </main>
+<script src="script.js"></script>
+<script>
+    document.getElementById('continueToProfile').addEventListener('click', function() {
+        window.location.href = "profile.html";
+    });
+    </script>
+</body>
+</html>

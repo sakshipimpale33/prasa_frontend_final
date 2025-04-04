@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience Details</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <h2>Past Experience Details</h2>
+    <div class="form-wrapper">
+        <div class="form-card">
+            <h3>Professional Experience</h3>
+            <form id="experienceForm">
+                <div id="experienceFields">
+                    <div class="experience-entry">
+                        <div class="input-group">
+                            <i class="fas fa-building"></i>
+                            <input type="text" name="company[]" placeholder="Company Name" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <i class="fas fa-user-tie"></i>
+                            <input type="text" name="designation[]" placeholder="Designation" required>
+                        </div>
+                        
+                        <!-- Date inputs with clear placeholders -->
+                        <div class="date-range">
+                            <div class="input-group">
+                                <i class="fas fa-calendar-alt"></i>
+                                <input type="text" name="fromDate[]" placeholder="Start Date" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" required>
+                            </div>
+                            <div class="input-group">
+                                <i class="fas fa-calendar-alt"></i>
+                                <input type="text" name="toDate[]" placeholder="End Date" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" required>
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <input type="text" name="reasonForLeaving[]" placeholder="Reason for Leaving" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-trophy"></i>
+                            <input type="text" name="achievements[]" placeholder="Achievements">
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-tasks"></i>
+                            <input type="text" name="kraHandle[]" placeholder="KRA Handle">
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-users"></i>
+                            <input type="number" name="teamSize[]" placeholder="Team Size Handle">
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-address-book"></i>
+                            <input type="text" name="contactDetails[]" placeholder="Contact Details">
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="button" id="addExperience" class="secondary-button">
+                    <i class="fas fa-plus"></i> Add More Experience
+                </button>
+                
+                <div class="nav-buttons">
+                    <button type="button" id="backToFamily" class="button-group">BACK</button>
+                    <button type="button" id="goToQualification" class="primary-button">NEXT</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

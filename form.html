@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <h2>Personal Information</h2>
+    <div class="form-wrapper">
+        
+        <!-- Personal & Contact Information -->
+        <div class="form-card">
+           <!-- <h3>Personal Information</h3>-->
+            <form id="userForm">
+                <label for="title"></label>
+                <select id="title" required>
+                    <option value="">Select Title</option>
+                    <option value="Mr.">Mr.</option>
+                    <option value="Ms.">Ms.</option>
+                    <option value="Mrs.">Mrs.</option>
+                    <option value="Dr.">Dr.</option>
+                </select>
+
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="firstName" placeholder="First Name" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="middleName" placeholder="Middle Name">
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="lastName" placeholder="Last Name" required>
+                </div>
+
+                <h3 for="dob" style="text-align: left; display: block;">Date of Birth</h3>
+<div class="input-group">
+    <i class="fas fa-calendar-alt"></i>
+    <input type="date" id="dob" required>
+</div>
+                <div class="input-group">
+                    <i class="fas fa-hashtag"></i>
+                    <input type="number" id="age" placeholder="Age" required>
+                </div>
+
+                <h3>Contact Information</h3>
+                <div class="input-group">
+                    <i class="fas fa-home"></i>
+                    <input type="text" id="address" placeholder="Address" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" id="phone" placeholder="Phone Number" required>
+                </div>
+            </form>
+        </div>
+
+        <!-- Temporary Address & Other Details -->
+        <div class="form-card">
+            <h3>Temporary Address</h3>
+            <div class="grid-container">
+                <div class="input-group">
+                    <i class="fas fa-city"></i>
+                    <input type="text" id="city" placeholder="City" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <input type="text" id="state" placeholder="State" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-map-pin"></i>
+                    <input type="text" id="pinCode" placeholder="Pin Code" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-globe"></i>
+                    <input type="text" id="country" placeholder="Country" required>
+                </div>
+            </div>
+
+            <h3 class="other-details-title">Other Details</h3>
+            <div class="grid-container">
+                <input type="text" id="nationality" placeholder="Nationality" required>
+                <input type="text" id="religion" placeholder="Religion" required>
+                <input type="text" id="aadharNo" placeholder="Aadhar No." required>
+                <input type="text" id="drivingLicenseNo" placeholder="Driving License No." required>
+                <input type="text" id="panNo" placeholder="PAN No." required>
+                <input type="text" id="passportNo" placeholder="Passport No." required>
+                <input type="text" id="votingCardNo" placeholder="Voting Card No." required>
+                <input type="text" id="rationCardNo" placeholder="Ration Card No." required>
+                <input type="text" id="uanNo" placeholder="UAN No." required>
+                <input type="text" id="esicNo" placeholder="ESIC No." required>
+            </div>
+            &nbsp
+            <!-- Bank Details (New Section) -->
+            <h3>Bank Details</h3>
+            <div class="grid-container">
+                <div class="input-group">
+                    <i class="fas fa-university"></i>
+                    <input type="text" id="bankName" placeholder="Bank Name" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-code"></i>
+                    <input type="text" id="ifscCode" placeholder="IFSC Code" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-credit-card"></i>
+                    <input type="text" id="accountNo" placeholder="Account No." required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-building"></i>
+                    <input type="text" id="bankBranch" placeholder="Branch" required>
+                </div>
+            </div>
+
+            <!-- Family Details (New Section) -->
+            <h3>Family Details</h3>
+            <div class="grid-container">
+                <div class="input-group">
+                    <i class="fas fa-ring"></i>
+                    <select id="maritalStatus" required>
+                        <option value="">Marital Status</option>
+                        <option value="Single">Single</option>
+                        <option value="Married">Married</option>
+                        <option value="Divorced">Divorced</option>
+                        <option value="Widowed">Widowed</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-user-friends"></i>
+                    <input type="text" id="spouseName" placeholder="Spouse Name">
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-child"></i>
+                    <input type="text" id="children" placeholder="Children">
+                </div>
+            </div>
+
+            <!-- Joining Details (New Section) -->
+            <h3>Joining Details</h3>
+            <div class="grid-container">
+                <div class="input-group">
+                    <i class="fas fa-calendar-plus"></i>
+                    <input type="date" id="dateOfJoining" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-sitemap"></i>
+                    <input type="text" id="department" placeholder="Department" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-id-badge"></i>
+                    <input type="text" id="designation" placeholder="Designation" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-user-tie"></i>
+                    <input type="text" id="reportingTo" placeholder="Reporting To" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-user-tie"></i>
+                    <input type="text" id="totalexperience" placeholder="Total Experience" required>
+                </div>
+                
+            </div>
+
+            <!-- Submit Button in Second Card -->
+            <button type="submit" form="userForm">NEXT</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

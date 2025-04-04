@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qualification Details</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <h2>Qualification Details</h2>
+    <div class="form-wrapper">
+        <div class="form-card">
+            <h3>Educational Background</h3>
+            <form id="qualificationForm">
+                <div id="qualificationFields">
+                    <div class="qualification-entry">
+                        <div class="input-group">
+                            <i class="fas fa-graduation-cap"></i>
+                            <select name="education_type[]" required>
+                                <option value="">Select Education Type</option>
+                                <option value="SSC">SSC</option>
+                                <option value="HSC">HSC</option>
+                                <option value="ITI">ITI</option>
+                                <option value="Diploma">Diploma</option>
+                                <option value="Graduation">Graduation</option>
+                                <option value="Post Graduation">Post Graduation</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+                        <div class="date-range">
+                            <div class="input-group">
+                                <i class="fas fa-calendar-alt"></i>
+                                <input type="text" name="eduFromDate[]" placeholder="Start Date" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" required>
+                            </div>
+                            <div class="input-group">
+                                <i class="fas fa-calendar-alt"></i>
+                                <input type="text" name="eduToDate[]" placeholder="End Date" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" required>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-school"></i>
+                            <input type="text" name="instituteName[]" placeholder="Institute Name" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-book"></i>
+                            <input type="text" name="specialization[]" placeholder="Specialization">
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-certificate"></i>
+                            <input type="text" name="nacAccretion[]" placeholder="NAC Accretion">
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-university"></i>
+                            <input type="text" name="boardUniversity[]" placeholder="Board/University" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-clock"></i>
+                            <select name="eduType[]" required>
+                                <option value="">Select Type</option>
+                                <option value="Full Time">Full Time</option>
+                                <option value="Part Time">Part Time</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-star"></i>
+                            <input type="text" name="score[]" placeholder="Score" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-tasks"></i>
+                            <select name="status[]" required>
+                                <option value="">Select Status</option>
+                                <option value="Completed">Completed</option>
+                                <option value="Not Completed">Not Completed</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-file-alt"></i>
+                            <select name="proofsSubmitted[]" required>
+                                <option value="">Proofs Submitted?</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="button" id="addQualification" class="secondary-button">
+                    <i class="fas fa-plus"></i> Add More Qualification
+                </button>
+                &nbsp
+                <h3>Skills & Certifications</h3>
+                <div class="input-group">
+                    <i class="fas fa-laptop-code"></i>
+                    <input type="text" id="skills" placeholder="Skills (separated by commas)">
+                </div>
+                <div id="certificationFields">
+                    <div class="certification-entry">
+                        <div class="input-group">
+                            <i class="fas fa-certificate"></i>
+                            <input type="text" name="certificationName[]" placeholder="Certification Name">
+                        </div>
+                        <div class="date-range">
+                            <div class="input-group">
+                                <i class="fas fa-calendar-alt"></i>
+                                <input type="text" name="certFromDate[]" placeholder="Start Date" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" required>
+                            </div>
+                            <div class="input-group">
+                                <i class="fas fa-calendar-alt"></i>
+                                <input type="text" name="certToDate[]" placeholder="End Date" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" id="addCertification" class="secondary-button">
+                    <i class="fas fa-plus"></i> Add More Certification
+                </button>
+                
+                <div class="nav-buttons">
+                    <button type="button" id="backToExperience" class="primary-button">BACK</button>
+                    <button type="submit" class="primary-button">NEXT</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
