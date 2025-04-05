@@ -320,7 +320,7 @@ if (userForm) {
                 nominee1_name: document.querySelector("#nominee1_name")?.value || "",
                 nominee1_relationship: document.querySelector("#nominee1_relationship")?.value || "",
                 nominee1_share: document.querySelector("#nominee1_share")?.value || "",
-                nominee2_name: document.querySelector("#nominee1_name")?.value || "",
+                nominee2_name: document.querySelector("#nominee2_name")?.value || "",
                 nominee2_relationship: document.querySelector("#nominee2_relationship")?.value || "",
                 nominee2_share: document.querySelector("#nominee2_share")?.value || "",
                 
