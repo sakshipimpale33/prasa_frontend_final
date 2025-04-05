@@ -600,7 +600,7 @@ if (userForm) {
     
         // Navigate back to experience
         document.getElementById('backToExperience').addEventListener('click', () => {
-            window.location.href = 'experience.html';
+            window.location.href = 'experience_form.html';
         });
     
         // Submit all data
