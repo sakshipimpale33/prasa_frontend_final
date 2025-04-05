@@ -1044,7 +1044,7 @@ if (medicalInfoForm) {
             blood_pressure: document.querySelector("input[name='blood_pressure']:checked")?.value || "Don't Know", // Default string value
             has_heart_problem: document.querySelector("input[name='has_heart_problem']:checked")?.value || "No",
             is_diabetic: document.querySelector("input[name='is_diabetic']:checked").value || "No",
-           // sugar_check_frequency: document.querySelector("#sugarCheckFrequency")?.value || "", // Optional field, blank if not filled
+           sugar_check_frequency: document.querySelector("#sugar_check_frequency")?.value || "", // Optional field, blank if not filled
             had_stress_test: document.querySelector("input[name='had_stress_test']:checked")?.value || "No",
             stress_test_details: document.querySelector("#stress_test_details")?.value || "",
             had_mental_health_screening: document.querySelector("input[name='had_mental_health_screening']:checked")?.value || "No",
