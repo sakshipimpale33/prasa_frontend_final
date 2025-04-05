@@ -112,13 +112,6 @@ if (loginForm) {
         }
     });
 }
-
-
-    // Register User
-    
-
-    // Submit User Details (Update or Create User Data)
-   // Submit User Details (Update or Create User Data)
 if (userForm) {
     console.log("User form found"); // Debugging
 
@@ -398,7 +391,7 @@ if (userForm) {
                 console.log("Server response:", result);
     
                 if (response.ok) {
-                    alert("Family details saved successfully!");
+                    alert("All details saved successfully!");
                     window.location.href = "experience_form.html";
                 } else {
                     console.error("Server returned error:", result);
@@ -406,7 +399,7 @@ if (userForm) {
                 }
             } catch (error) {
                 console.error("Error submitting family form:", error);
-                alert("An error occurred while submitting the family form.");
+                alert("An error occurred while submitting the form.");
             }
         });
     }
@@ -546,7 +539,7 @@ if (userForm) {
                 console.log("Server response:", result);
     
                 if (response.ok) {
-                    console.log("Experience data saved successfully");
+                    console.log("All details saved successfully!");
                     window.location.href = "qualification.html";
                 } else {
                     console.error("Server returned error:", result);
@@ -625,7 +618,7 @@ if (userForm) {
             const nacAccretion = [];
             const boardUniversity = [];
             const eduType = [];
-            const score = [];
+            const score = [];ss
             const status = [];
             const proofsSubmitted = [];
     
@@ -984,6 +977,8 @@ async function loadMedicalDataWithRetry(retriesLeft = 3) {
 //         );
 //     });
 // }
+
+
 if (medicalInfoForm) {
     console.log("Medical Info form found");
     let formChanged = false;
