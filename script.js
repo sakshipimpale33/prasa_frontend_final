@@ -681,11 +681,13 @@ if (userForm) {
                 return;
             }
     
-            // Gather all certification entries
+// Gather all certification entries
 const certificationEntries = document.querySelectorAll('.certification-entry');
 const certificationName = [];
 const certFromDate = [];
 const certToDate = [];
+
+let isValid = true; // Flag to control form submission
 
 certificationEntries.forEach(entry => {
     const certNameInput = entry.querySelector('input[name="certificationName[]"]');
@@ -698,26 +700,35 @@ certificationEntries.forEach(entry => {
         const certToValue = certToInput.value;
 
         // Only proceed if any one of the fields is filled
-        if (certNameValue || certFromValue || certToValue) {
-            // Check if all fields are filled
-            if (!certNameValue || !certFromValue || !certToValue) {
-                alert("Please fill all fields for each certification or leave them all empty.");
-                return;
-            }
+        const anyFilled = certNameValue || certFromValue || certToValue;
+        const allFilled = certNameValue && certFromValue && certToValue;
 
-            // Validate Date Range
+        if (anyFilled && !allFilled) {
+            alert("Please fill all fields for each certification or leave them all empty.");
+            isValid = false;
+            return;
+        }
+
+        if (allFilled) {
+            // Validate date range
             if (!isValidDateRange(certFromValue, certToValue)) {
                 alert(`Invalid date range for "${certNameValue}". "From" date must be before "To" date.`);
+                isValid = false;
                 return;
             }
 
-            // All good, push values
             certificationName.push(certNameValue);
             certFromDate.push(certFromValue);
             certToDate.push(certToValue);
         }
     }
 });
+
+// If invalid, stop form submission
+if (!isValid) {
+    e.preventDefault(); // Call this inside your form submit handler
+    return;
+}
 
     
             // Get skills
