@@ -681,54 +681,67 @@ if (userForm) {
                 return;
             }
     
-// Gather all certification entries
-const certificationEntries = document.querySelectorAll('.certification-entry');
-const certificationName = [];
-const certFromDate = [];
-const certToDate = [];
-
-let isValid = true; // Flag to control form submission
-
-certificationEntries.forEach(entry => {
-    const certNameInput = entry.querySelector('input[name="certificationName[]"]');
-    const certFromInput = entry.querySelector('input[name="certFromDate[]"]');
-    const certToInput = entry.querySelector('input[name="certToDate[]"]');
-    
-    if (certNameInput && certFromInput && certToInput) {
-        const certNameValue = certNameInput.value.trim();
-        const certFromValue = certFromInput.value;
-        const certToValue = certToInput.value;
-
-        // Only proceed if any one of the fields is filled
-        const anyFilled = certNameValue || certFromValue || certToValue;
-        const allFilled = certNameValue && certFromValue && certToValue;
-
-        if (anyFilled && !allFilled) {
-            alert("Please fill all fields for each certification or leave them all empty.");
-            isValid = false;
-            return;
-        }
-
-        if (allFilled) {
-            // Validate date range
-            if (!isValidDateRange(certFromValue, certToValue)) {
-                alert(`Invalid date range for "${certNameValue}". "From" date must be before "To" date.`);
-                isValid = false;
-                return;
-            }
-
-            certificationName.push(certNameValue);
-            certFromDate.push(certFromValue);
-            certToDate.push(certToValue);
-        }
-    }
-});
-
-// If invalid, stop form submission
-if (!isValid) {
-    e.preventDefault(); // Call this inside your form submit handler
-    return;
-}
+            document.getElementById("yourFormId").addEventListener("submit", function (e) {
+                e.preventDefault(); // Stop default form submission
+            
+                // Gather all certification entries
+                const certificationEntries = document.querySelectorAll('.certification-entry');
+                const certificationName = [];
+                const certFromDate = [];
+                const certToDate = [];
+            
+                let isValid = true;
+            
+                certificationEntries.forEach(entry => {
+                    const certNameInput = entry.querySelector('input[name="certificationName[]"]');
+                    const certFromInput = entry.querySelector('input[name="certFromDate[]"]');
+                    const certToInput = entry.querySelector('input[name="certToDate[]"]');
+            
+                    if (certNameInput && certFromInput && certToInput) {
+                        const certNameValue = certNameInput.value.trim();
+                        const certFromValue = certFromInput.value;
+                        const certToValue = certToInput.value;
+            
+                        const anyFilled = certNameValue || certFromValue || certToValue;
+                        const allFilled = certNameValue && certFromValue && certToValue;
+            
+                        if (anyFilled && !allFilled) {
+                            alert("Please fill all fields for each certification or leave them all empty.");
+                            isValid = false;
+                            return;
+                        }
+            
+                        if (allFilled) {
+                            // Validate date range
+                            if (!isValidDateRange(certFromValue, certToValue)) {
+                                alert(`Invalid date range for "${certNameValue}". "From" date must be before "To" date.`);
+                                isValid = false;
+                                return;
+                            }
+            
+                            certificationName.push(certNameValue);
+                            certFromDate.push(certFromValue);
+                            certToDate.push(certToValue);
+                        }
+                    }
+                });
+            
+                if (!isValid) return; // Stop submission if any validation failed
+            
+                // ✅ If everything is valid, you can now send the form data via fetch or submit
+                console.log("Certifications to submit:", {
+                    certificationName,
+                    certFromDate,
+                    certToDate
+                });
+            
+                // Example: manually submit the form if needed
+                // this.submit();
+            
+                // OR send using fetch:
+                // fetch("/your-api-endpoint", { method: "POST", body: yourData });
+            });
+            
 
     
             // Get skills
