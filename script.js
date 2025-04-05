@@ -682,34 +682,43 @@ if (userForm) {
             }
     
             // Gather all certification entries
-            const certificationEntries = document.querySelectorAll('.certification-entry');
-            const certificationName = [];
-            const certFromDate = [];
-            const certToDate = [];
+const certificationEntries = document.querySelectorAll('.certification-entry');
+const certificationName = [];
+const certFromDate = [];
+const certToDate = [];
+
+certificationEntries.forEach(entry => {
+    const certNameInput = entry.querySelector('input[name="certificationName[]"]');
+    const certFromInput = entry.querySelector('input[name="certFromDate[]"]');
+    const certToInput = entry.querySelector('input[name="certToDate[]"]');
     
-            certificationEntries.forEach(entry => {
-                const certNameInput = entry.querySelector('input[name="certificationName[]"]');
-                const certFromInput = entry.querySelector('input[name="certFromDate[]"]');
-                const certToInput = entry.querySelector('input[name="certToDate[]"]');
-                
-                if (certNameInput && certFromInput && certToInput) {
-                    const certNameValue = certNameInput.value.trim();
-                    const certFromValue = certFromInput.value;
-                    const certToValue = certToInput.value;
-                    
-                    if (certNameValue && certFromValue && certToValue) {
-                        certificationName.push(certNameValue);
-                        certFromDate.push(certFromValue);
-                        certToDate.push(certToValue);
-    
-                        // Validate Date Range
-                        if (!isValidDateRange(certFromValue, certToValue)) {
-                            alert(`Invalid date range for ${certNameValue}. "From" date must be before "To" date.`);
-                            return;
-                        }
-                    }
-                }
-            });
+    if (certNameInput && certFromInput && certToInput) {
+        const certNameValue = certNameInput.value.trim();
+        const certFromValue = certFromInput.value;
+        const certToValue = certToInput.value;
+
+        // Only proceed if any one of the fields is filled
+        if (certNameValue || certFromValue || certToValue) {
+            // Check if all fields are filled
+            if (!certNameValue || !certFromValue || !certToValue) {
+                alert("Please fill all fields for each certification or leave them all empty.");
+                return;
+            }
+
+            // Validate Date Range
+            if (!isValidDateRange(certFromValue, certToValue)) {
+                alert(`Invalid date range for "${certNameValue}". "From" date must be before "To" date.`);
+                return;
+            }
+
+            // All good, push values
+            certificationName.push(certNameValue);
+            certFromDate.push(certFromValue);
+            certToDate.push(certToValue);
+        }
+    }
+});
+
     
             // Get skills
             const skillsInput = document.getElementById('skills');
