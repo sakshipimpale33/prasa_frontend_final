@@ -681,7 +681,7 @@ if (userForm) {
                 return;
             }
     
-            document.getElementById("yourFormId").addEventListener("submit", function (e) {
+            document.getElementById("qualificationForm").addEventListener("submit", function (e) {
                 e.preventDefault(); // Stop default form submission
             
                 // Gather all certification entries
