@@ -319,9 +319,9 @@ if (userForm) {
                 nominee1_name: document.querySelector("#nominee1_name")?.value || "",
                 nominee1_relationship: document.querySelector("#nominee1_relationship")?.value || "",
                 nominee1_share: document.querySelector("#nominee1_share")?.value || "",
-                nominee2_name: document.querySelector("#nominee2Name")?.value || "",
-                nominee2_relationship: document.querySelector("#nominee2Relationship")?.value || "",
-                nominee2_share: document.querySelector("#nominee2Share")?.value || "",
+                nominee2_name: document.querySelector("#nominee1_name")?.value || "",
+                nominee2_relationship: document.querySelector("#nominee2_relationship")?.value || "",
+                nominee2_share: document.querySelector("#nominee2_share")?.value || "",
                 
                 emergency1_name: document.querySelector("#emergency1_name")?.value || "",
                 emergency1_relationship: document.querySelector("#emergency1_relationship")?.value || "",
