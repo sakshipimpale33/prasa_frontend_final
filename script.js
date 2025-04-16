@@ -220,10 +220,11 @@ if (userForm) {
             return;
         }
 
-        if (formData.aadharNo && !isValidAadhar(formData.aadharNo)) {
-            alert("Please enter a valid 12-digit Aadhar number.");
+        if (formData.aadharNo && (!isValidAadhar(formData.aadharNo) || /\s/.test(formData.aadharNo))) {
+            alert("Please enter a valid 12-digit Aadhar number without spaces.");
             return;
         }
+        
 
         if (formData.ifscCode && !isValidIFSC(formData.ifscCode)) {
             alert("Please enter a valid IFSC Code (e.g., HDFC0001234).");
